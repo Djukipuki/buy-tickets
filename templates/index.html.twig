@@ -1,0 +1,16 @@
+<form action="{{ path('search') }}" method="post">
+    <label>Departure airport</label>
+    <input type="text" name="departureAirport" required>
+
+    <label>Arrival airport</label>
+    <input type="text" name="arrivalAirport" required>
+
+    <label>Departure date</label>
+    <input type="text" name="departureDate" required>
+
+    <button type="submit">Search</button>
+</form>
+
+{% if searchResult %}
+    {{ dump(searchResult) }}
+{% endif %}
